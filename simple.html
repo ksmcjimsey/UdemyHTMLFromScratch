@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset = "UTF-8">
+    
+    <title></title>
+    
+    <!--   <style type="text/css"></style>   -->
+    <!--   <link rel="stylesheet" href="css/style.css" type="text/css">   -->
+
+</head>
+
+
+<body>
+
+    <main>
+    <!-- <script type="text/javascript"></script> -->
+    <p>Click below to get your position</p>
+    <button onclick="showLocation()">Click</button>
+    <script type="text/javascript">
+        function showLocation() {
+            if  (navigator.geolocation) {
+                // The navigator is the bowser object.
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert('Your browser does not support geolocation');
+            }
+        }   // end of showLocation method
+        
+        function showPosition(position) {
+            alert("Latitude: " + position.coords.latitude + " Logitude: " + position.coords.longitude);
+        }
+    </script>
+    
+    
+    </main>
+    
+    <!-- <footer></footer> -->
+    
+</body>
+
+</html>
